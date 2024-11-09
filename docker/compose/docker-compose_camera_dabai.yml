@@ -9,15 +9,15 @@ services:
       - my_bridge_network
     command: "ros2 launch orbbec_camera dabai_dcw.launch.py"
 
-  rosbridge:
-    image: registry.screamtrumpet.csie.ncku.edu.tw/pros_images/pros_base_image:latest
-    env_file:
-      - .env
-    networks:
-      - my_bridge_network
-    ports:
-      - 9090:9090
-    command: "ros2 launch rosbridge_server rosbridge_websocket_launch.xml"
+  # rosbridge:
+  #   image: registry.screamtrumpet.csie.ncku.edu.tw/pros_images/pros_base_image:latest
+  #   env_file:
+  #     - .env
+  #   networks:
+  #     - my_bridge_network
+  #   ports:
+  #     - 9090:9090
+  #   command: "ros2 launch rosbridge_server rosbridge_websocket_launch.xml"
 
   compress:
     image: registry.screamtrumpet.csie.ncku.edu.tw/pros_images/pros_jetson_driver_image:latest

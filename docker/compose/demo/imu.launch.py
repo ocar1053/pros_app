@@ -27,9 +27,8 @@ def generate_launch_description():
         name='ekf_filter_node',
         output='screen',
         parameters=[ekf_config_file],
-        remappings=[('odometry', 'odometry'),
-                ('imu/data', 'imu/data')]
     )
+    
 
     # 打印消息：wit_ros2_imu 节点启动成功
     wit_ros2_imu_success_message = LogInfo(
